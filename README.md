@@ -38,5 +38,19 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
           <b>Yann Escobar</b>
         </sub>
       </a>
+      <td align="center">
+      <a href="https://github.com/ThiagoALM626" title="Sobre">
+        <img src="https://avatars.githubusercontent.com/u/288315951?v=4" width="100px;" alt="Foto do ThiagoALM626 no GitHub"/><br>
+        <sub>
+          <b>ThiagoALM626</b>
+        </sub>
+      </a>
+      <td align="center">
+      <a href="https://github.com/thiagobasilio887-sys" title="Sobre">
+        <img src="https://avatars.githubusercontent.com/u/288312813?v=4" width="100px;" alt="Foto do thiagobasilio887-sys no GitHub"/><br>
+        <sub>
+          <b>ThiagoALM626</b>
+        </sub>
+      </a>
   </tr>
 </table>
