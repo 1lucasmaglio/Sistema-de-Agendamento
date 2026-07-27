@@ -6,25 +6,28 @@ public class UItest {
     public static void main(String[] args) throws Exception{
         JFrame janela = new JFrame();
 
-        JLabel labelUsuario = new JLabel("Usuário");
+        JLabel labelUsuario = new JLabel("Usuário & Senha");
         // Cria um objeto JLabel
         // Nada mais nada menos que um texto na tela com a string: "Usuário"
-
-        labelUsuario.setBounds(485, 200, 100, 80);
+        labelUsuario.setBounds(465, 200, 100, 80);
         // Define a posição da JLabel
 
         JTextField digiteUsuario = new JTextField();
         // Cria um campo para inserir Texto
-
         digiteUsuario.setBounds(410, 260, 200, 40);
         // Define a posição do JTextField
+
+        JPasswordField senha = new JPasswordField();
+        //Cria um campo para digitar a senha
+        senha.setBounds(410, 300, 200, 40);
+
 
         JButton logar = new JButton("Login");
         // Cria uma variável com o metodo JButton
         // "Coloca" um texto nesse botão 'Login'
         // Agora temos que adiciona-ló na janela(JFrame)
 
-        logar.setBounds(360, 300, 300, 50);
+        logar.setBounds(360, 500, 300, 50);
         //Como definimos o layout da janela para nulo, temos que especificar a posição do botao
 
         logar.addActionListener(new ActionListener() {
@@ -34,7 +37,14 @@ public class UItest {
             @Override
             // não sei o que é @ override foi implementado pela própria IDE
             public void actionPerformed(ActionEvent e) {
-            System.out.println("Bem vindo(a), isso é apenas um teste");
+            String usuario = digiteUsuario.getText();
+            // Cria uma variável do tipo string nesse escopo, e atribui a ela o valor digitado na variável 'digiteUsuario'
+
+            String asenha = new String(senha.getPassword());
+
+
+            System.out.printf("Usuário: %s\nSenha: %s", usuario, asenha);
+
             }
         });
 
@@ -46,6 +56,8 @@ public class UItest {
 
         janela.add(digiteUsuario);
         // Adiciona o JTextFiel ad JFrame
+
+        janela.add(senha);
 
         janela.setLayout(null);
         // Define o layout da janela para nenhum, permitindo posicionar os itens livremente.
