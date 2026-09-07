@@ -1,0 +1,61 @@
+/*Importação de fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Neuton:wght@300;400;700;800&display=swap');
+@import url('../css/navbar.css');
+/* Boa prática de 'zerar' o estilo da página*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Neuton", "Serif";
+}
+a.btn{
+  text-decoration: none;
+}
+.btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  list-style: none;
+}
+
+.btn-hamburger{
+  font-size: 1.5rem;
+}
+
+/*Botão de telefone*/
+.btn-default{
+  display: none;
+  background-color: var(--prm-color);
+  color: var(--ter-color);
+  
+  &:hover{
+    background-color: var(--sec-color);
+  }
+
+  li{
+    list-style: none;
+  }
+}
+
+/*Variáveis das cores:*/
+:root{
+  /*Variáveis em css sempre começam com dois traços*/
+  --neutral-color: #f7f7f9;
+  --prm-color: #90d27b;
+  --sec-color: #ce4760;
+  --ter-color: #23022e;
+}
+
+
+/*Estilização do footer*/
+.foot{
+  background-color: rgb(207, 233, 180);
+  padding: 90px 40px;
+
+}
