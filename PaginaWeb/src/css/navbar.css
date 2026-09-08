@@ -23,7 +23,6 @@ header{
       #logotype{
       width: 90px;
       border-radius: 8px;
-      align-self: left;
     }
 
   ul{
@@ -31,13 +30,13 @@ header{
       display: none;
       list-style: none;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.3rem;
       width: 100%;
       position: absolute;
-      top: 90px;
-      background-color: var(--neutral-color);
+      top: 130px;
+      background-color: var(--neutral-color-1);
       left: 0;
-      padding: 1rem;
+      padding: 0.4rem;
 
       /*Esse '&' se refere a si-prórpio, e logo após estabelece uma condição para estilização o '.show'*/
       &.show{
@@ -48,52 +47,19 @@ header{
           text-align: center;
 
             a{
-              color: var(--prm-color);
+              color: var(--sec-color);
               text-decoration: none;
-              font-size: 1rem;
+              font-size: 1.5rem;
               font-weight: 500;
               transition: all 0.5s ease;
 
               &:hover{
-                color: var(--sec-color);
-                border-bottom: 1px solid var(--sec-color);
+                color: var(--ter-color);
+                border-bottom: 2px solid var(--ter-color);
 
               }
             }
       }
   }
 
-}
-
-body{
-  min-height: 120vh;
-  /*Evita sobreposição*/
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: var(--neutral-color);
-
-}
-
-@media (min-width: 769px) {
-  header{
-    .navbar{
-      .btn-hamburger{
-        display: none;
-      }
-
-      ul{
-        display: flex;
-        flex-direction: row;
-        position: static;
-        gap: 1rem;
-        width: auto;
-        padding: 0;
-      }
-
-      .btn-default{
-        display: block;
-      }
-    }
-  }
 }
