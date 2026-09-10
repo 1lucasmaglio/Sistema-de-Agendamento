@@ -1,65 +1,60 @@
-header{
-  background-color: var(--sec-color);
-  
-
-  /*O 'position:sticky;' Mantém a barra nav ao scroolar a página para baixo.*/
-  position: sticky;
-
-  padding: 12px 4%;
-  top: 0;
-  z-index: 1;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /*CSS Nesting para simplificar a leitura do código*/
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-      #logotype{
-      width: 90px;
-      border-radius: 8px;
-    }
-
-  ul{
-      /*Não é exibido*/
-      display: none;
-      list-style: none;
-      flex-direction: column;
-      gap: 0.3rem;
-      width: 100%;
-      position: absolute;
-      top: 130px;
-      background-color: var(--neutral-color-1);
-      left: 0;
-      padding: 0.4rem;
-
-      /*Esse '&' se refere a si-prórpio, e logo após estabelece uma condição para estilização o '.show'*/
-      &.show{
+.navbar {
+    header{
+      background-color: var(--sec-color);   
+      nav{
+        /*O 'position:sticky;' Mantém a barra nav ao scroolar a página para baixo.*/
+        position: sticky;
+        padding: 12px 4%;
+        top: 0;
+        z-index: 1;
         display: flex;
-      }
+        justify-content: space-between;
+        align-items: center;
+        
+        #logotype{
+            width: 90px;
+            border-radius: 8px;
+        }
 
-      li{
-          text-align: center;
+        ul{
+            /*Não é exibido*/
+            justify-content: space-between;
+            align-items: center;
+            display: none;
+            list-style: none;
+            flex-direction: column;
+            gap: 0.6rem;
+            width: 100%;
+            position: absolute;
+            top: 120px;
+            background-color: var(--neutral-color-1);
+            left: 0;
+            padding: 2rem;
 
-            a{
-              color: var(--sec-color);
-              text-decoration: none;
-              font-size: 1.5rem;
-              font-weight: 500;
-              transition: all 0.5s ease;
-
-              &:hover{
-                color: var(--ter-color);
-                border-bottom: 2px solid var(--ter-color);
-
-              }
+            /*Esse '&' se refere a si-prórpio, e logo após estabelece uma condição para estilização o '.show'*/
+            &.show{
+              display: flex;
             }
-      }
-  }
 
+            li{
+                text-align: center;
+
+                  a{
+                    color: var(--sec-color);
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    transition: all 0.5s ease;
+                    border-radius: 9px;
+
+                    &:hover{
+                      color: var(--ter-color-1);
+                      border-bottom: 2px solid var(--ter-color-1);
+                      font-size: 1.54rem;
+                    }
+                  }
+            }
+        }
+    }
+  }
 }
