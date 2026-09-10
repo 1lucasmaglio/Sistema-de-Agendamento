@@ -34,7 +34,7 @@ a.btn{
 /*Botão de telefone*/
 .btn-default{
   background-color: var(--prm-color);
-  color: var(--ter-color);
+  color: var(--ter-color-1);
   
   &:hover{
     background-color: var(--sec-color);
@@ -72,6 +72,10 @@ body{
   margin: 0;
   padding: 0;
   background-color: var(--neutral-color);
+
+  &.p{
+    color: var(--ter-color-1);
+  }
 }
 
 /*Variáveis das cores:*/
@@ -81,9 +85,15 @@ body{
   --neutral-color-1: #dddddf;
   --neutral-color-2: #bababf;
   --neutral-color-3: #1c1c1d;
-  --prm-color: #90d27b;
-  --sec-color: #ce4760;
-  --ter-color: #23022e;
+
+  --prm-color: #46CF8D;
+  --prm-color-1: #548F5F;
+
+  --sec-color: #CE4760;
+  --sec-color-1: #8F545F;
+
+  --ter-color: #4F4245;
+  --ter-color-1: #332427;
 }
 
 
@@ -91,28 +101,41 @@ body{
 .foot{
   background-color: rgb(207, 233, 180);
   padding: 90px 40px;
-
+}
+.foot-copyright{
+  color: var(--neutral-color-3);
+  background-color: var(--neutral-color-2);
+  padding: 90px 40px;
 }
 
 /*Por algum motivo isso não funciona:*/
 @media (min-width: 769px) {
-  header {
-    .navbar {
+  .navbar {
+    header {
+      nav{
       .btn-hamburger{
-        display: none;
-      }
-
-      ul{
-        display: flex;
-        flex-direction: row;
-        position: static;
-        gap: 1rem;
-        width: auto;
-        padding: 0;
-      }
-
-      .btn-default{
-        display: block;
+          display: none;
+        }
+          ul{
+            background-color: var(--prm-color);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            position: static;
+            gap: 1rem;
+            width: auto;
+            padding: 0;
+          }
+            a{
+              color: var(--prm-color-1);
+              text-decoration: none;
+              font-size: 1.5rem;
+              font-weight: 500;
+              padding: 1px 6px;
+            }
+          .btn-default{
+            display: block;
+          }
       }
     }
   }
