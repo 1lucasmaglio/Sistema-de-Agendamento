@@ -7,15 +7,142 @@
 
 <img src="https://www.magnific.com/br/fotos-gratis/belo-retrato-de-cachorro-pequeno-com-bolhas_21249117.htm#fromView=keyword&page=1&position=2&uuid=fbe1c365-9107-42c6-95bd-cc1d1854aff1&query=Banho+tosa" alt="PlaceHolderdoBanhoeTosa">
 
-> Projeto simples para de um sistema de agendamento para um estabelecimento de banho e tosa. Focado na experiência do usuário.
+# Sistema de Agendamento para Banho e tosa
+  Um projeto focado em desenvolver competências e adquirir experiência de forma prática, o aplicativo é dividido em duas partes:
+  ## Desktop:
+  Onde será possível verificar os horários disponíveis, administrando se será possível ou não receber clientes. 
+  ## Web:
+  Verificar por um sistema de usuário quando haverá hotários disponíveis, além de marcar um horário para o seu pet.
+  Também será possível verificar o valor de cada serviço oferecido pelo estabelecimento.
 
-### Ajustes e melhorias
+# 🔄Fluxograma do projeto:
+### Cliente
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
+```
+┌─────────────────────────────────────────────────────────────┐
+│                   USUÁRIO (PET OWNER)                       │
+└──────────────────┬──────────────────────────────────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+        ▼                     ▼
+   [ACESSO]              [NOVO USUÁRIO]
+        │                     │
+        ├──Login──────────Register─┐
+        │                     │   │
+        └─────────┬───────────┘   │
+                  │               │
+                  ▼               │
+         ┌─────────────────┐      │
+         │ DASHBOARD       │◄─────┘
+         │ (HOME)          │
+         └────────┬────────┘
+                  │
+        ┌─────────┼─────────┐
+        │         │         │
+        ▼         ▼         ▼
+    [SERVIÇOS] [PETS]   [AGENDAMENTOS]
+        │         │         │
+        └─────────┼─────────┘
+                  │
+                  ▼
+        ┌──────────────────┐
+        │ BOOKING FORM     │
+        ├──────────────────┤
+        │ • Selecionar Pet │
+        │ • Serviço        │
+        │ • Data/Hora      │
+        │ • Confirmação    │
+        └────────┬─────────┘
+                 │
+                 ▼
+        ┌─────────────────────┐
+        │ CONFIRMAÇÃO DO AGEND.│
+        └────────┬────────────┘
+                 │
+        ┌────────┴────────┐
+        │                 │
+        ▼                 ▼
+    [NOTIFICAÇÃO]   [FEEDBACK]
+    Email/SMS        Reviews
+        │                 │
+        └────────┬────────┘
+                 │
+         ┌───────▼────────┐
+         │ HISTÓRICO DE   │
+         │ AGENDAMENTOS   │
+         │ (Editar/Canc.) │
+         └────────────────┘
+```         
+### Adiministrador:
 
-- [ ] Sistema de Login
-- [ ] Monitoramento
-- [ ] Desing da página
+```
+┌─────────────────────────────────────────────────────────────┐
+│               ADMINISTRADOR/STAFF                           │
+└──────────────────┬──────────────────────────────────────────┘
+                   │
+                   ▼
+            [LOGIN ADMIN]
+                   │
+                   ▼
+         ┌──────────────────────┐
+         │ PAINEL ADMINISTRATIVO│
+         ├──────────────────────┤
+         │ • Dashboard          │
+         │ • Gerenciar Clientes │
+         │ • Gerenciar Pets     │
+         │ • Gerenciar Serviços │
+         │ • Calendarário       │
+         │ • Relatórios         │
+         │ • Configurações      │
+         └──────────────────────┘
+                   │
+        ┌──────────┼──────────┬──────────┐
+        │          │          │          │
+        ▼          ▼          ▼          ▼
+    [APROVA]  [EDITA]   [CANCELA]  [NOTIFICA]
+     AGENDS.   SERVIÇOS  AGENDAMS.  CLIENTES
+```
+
+# 🗺️ Roadmap do Projeto:
+
+## MVP(Produto Mínimo Viável) - Semanas 1 - 4
+Status: 🟠 50% Concluído
+- [x] Setup inicial
+- [x] CRUD menu
+- [ ] Frontend Desktop (Em progresso)
+- [ ] Sistema de Login (Prioridade Alta)
+- [ ] Sistema de gerenciamento de banco de dados (Prioridade Alta) 
+
+## Funções Essenciais - Semanas 4 - 6
+Status: 🔴 0% Iniciado
+- [ ] Autenticação
+- [ ] Perfil de usuário (web)
+- [ ] Perfil de Adiministrador (web)
+- [ ] Gerenciamento de agenda
+- [ ] Histórico de agendamentos anteriores
+- [ ] Notificação para o cliente
+- [ ] Cancelamento e edição
+Objetivo: Plataforma funcional.
+
+## Dashboard Adiministrativo - Semanas 7 - 10
+Status: 🔴 0% Iniciado
+- [ ] Tabelas e powerBI com estatísticas
+- [ ] Gerenciamento de Clientes
+- [ ] Ajuste de serviços (mudar preço etc.)
+- [ ] Gestão de agendamentos em fortmato de calendário
+- [ ] Relatórios de final de mês
+- [ ] UI Simples, Bonita e Funcional
+Objetivo: Lapidar funcionalidades, corrigir bugs e "Embelezar" o aplicativo.
+
+### Otimização e Finalização - Semanas 10 - 14
+Status: 🔴 0% Iniciado
+- [ ] Utilizar o feedback sobre a UI
+- [ ] Sistema de pagamento via pix
+- [ ] Integração com calendários (Proton calendar, google calendar etc)
+- [ ] Testes automatizados
+- [ ] Deploy
+Objetivo: Produto pronto para ser usado. 
 
 ## 🤝 Colaboradores
 
